@@ -1,0 +1,11 @@
+version: "2"
+services:
+  shout:
+    image: tvaughan/shout:0.53.0
+    command: shout
+    ports:
+    - "9000:9000"
+    volumes_from:
+    - shout-volume
+  shout-volume:
+    image: tvaughan/shout-volume:1
